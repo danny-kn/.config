@@ -1,0 +1,21 @@
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"bashls",
+		"lua_ls",
+		"texlab",
+		"tinymist",
+		"jdtls",
+		"ts_ls",
+		"html",
+		"htmx",
+		"templ",
+		"tailwindcss",
+		"gopls",
+		"golangci_lint_ls",
+		"rust_analyzer",
+		"ruby_lsp",
+		"jsonls",
+		"yamlls",
+		"taplo"
+	}
+})
