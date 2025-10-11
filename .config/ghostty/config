@@ -58,11 +58,17 @@ window-theme=auto
 # theme=NvimDark
 # theme=NvimLight
 
+# theme=seoulbones_dark
+# theme=seoulbones_light
+
+# theme=zenwritten_dark
+# theme=zenwritten_light
+
 theme=custom_colorscheme
 
 alpha-blending=native
 
-font-family=ZedMono Nerd Font
+font-family=IosevkaTerm Nerd Font
 font-size=14
 
 font-style=Regular
