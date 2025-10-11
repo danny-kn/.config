@@ -1,7 +1,10 @@
 vim.pack.add({
 	-- { src = "https://github.com/catppuccin/nvim" },
 	-- { src = "https://github.com/rose-pine/neovim" },
-	--
+
+	-- { src = "https://github.com/rktjmp/lush.nvim" },
+	-- { src = "https://github.com/zenbones-theme/zenbones.nvim" },
+
 	{ src = "https://github.com/vague2k/vague.nvim" },
 
 	{ src = "https://github.com/mason-org/mason.nvim" },
@@ -40,6 +43,8 @@ vim.pack.add({
 
 -- require("plugins.catppuccin")
 -- require("plugins.rose-pine")
+
+-- require("plugins.zenbones")
 
 require("plugins.vague")
 
