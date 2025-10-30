@@ -124,7 +124,7 @@ export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-$HOST"
 MAILSYNC_MUTE=1
 export SCREENSHOT_TOOL="gnome-screenshot"
 
-ZSH_THEME="fishy"
+ZSH_THEME="clean"
 # ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
@@ -137,10 +137,10 @@ autoload -U colors && colors
 # plugins=(git zsh-autosuggestions zsh-syntax-highlighting dotenv)
 plugins=(git dotenv)
 
-[ -r "$ZSH/oh-my-zsh.sh" ] && \. "$ZSH/oh-my-zsh.sh"
-[ -r "$HOME/.zsh_aliases" ] && \. "$HOME/.zsh_aliases"
+[[ -r "$ZSH/oh-my-zsh.sh" ]] && \. "$ZSH/oh-my-zsh.sh"
+[[ -r "$HOME/.zsh_aliases" ]] && \. "$HOME/.zsh_aliases"
 
-[ -r "$HOME/.fzf.zsh" ] && \. "$HOME/.fzf.zsh"
+[[ -r "$HOME/.fzf.zsh" ]] && \. "$HOME/.fzf.zsh"
 
 export FZF_DEFAULT_COMMAND="fdfind --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -153,22 +153,22 @@ path_append()  { case ":$PATH:" in *":$1:"*) ;; *) PATH="$PATH:$1" ;; esac }
 typeset -U path PATH
 
 # export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
+# [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
 
 lazy_load() {
 	unset -f node npm nvm npx
 	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+	[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
+	[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
 }
 
 for cmd in node npm nvm npx; do
 	eval "${cmd}() { lazy_load; ${cmd} \$@; }"
 done
 
-[ -r "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
-[ -r "$HOME/.opam/opam-init/init.zsh" ] && \. "$HOME/.opam/opam-init/init.zsh"
+[[ -r "$HOME/.cargo/env" ]] && \. "$HOME/.cargo/env"
+[[ -r "$HOME/.opam/opam-init/init.zsh" ]] && \. "$HOME/.opam/opam-init/init.zsh"
 
 path_prepend "$HOME/.local/bin"
 path_prepend "$HOME/.local/share/bob/nvim-bin"
@@ -201,10 +201,10 @@ alias rip="yt-dlp -x --audio-format='mp3'"
 command -v uv >/dev/null && eval "$(uv generate-shell-completion zsh)"
 command -v uvx >/dev/null && eval "$(uvx --generate-shell-completion zsh)"
 
-[ -f "$ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ] &&
+[[ -f "$ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] &&
 	\. "$ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-[ -f "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] &&
+[[ -f "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] &&
 	\. "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 open_pwd() { open . }
@@ -216,3 +216,6 @@ unset HISTFILE
 # HISTFILE="$HOME/.zsh_history"
 # HISTSIZE=100000
 # SAVEHIST=100000
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && \. "$SDKMAN_DIR/bin/sdkman-init.sh"
