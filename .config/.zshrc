@@ -191,6 +191,9 @@ path_append "$GOPATH/bin"
 export OPENCODE_DIR="$HOME/.opencode"
 path_append "$OPENCODE_DIR/bin"
 
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && \. "$SDKMAN_DIR/bin/sdkman-init.sh"
+
 alias prime-run="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 
 alias venv="source ~/.venv/bin/activate"
@@ -216,6 +219,3 @@ unset HISTFILE
 # HISTFILE="$HOME/.zsh_history"
 # HISTSIZE=100000
 # SAVEHIST=100000
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && \. "$SDKMAN_DIR/bin/sdkman-init.sh"
