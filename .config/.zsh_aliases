@@ -8,8 +8,6 @@ alias p="pwd"
 alias l="ls --color=always"
 alias ll="ls -alrt --color=always"
 
-alias grep="grep --color=always"
-
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
