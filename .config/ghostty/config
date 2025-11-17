@@ -55,20 +55,28 @@ window-theme=auto
 # theme=rose-pine-moon
 # theme=rose-pine-dawn
 
-theme=NvimDark
+# theme=NvimDark
 # theme=NvimLight
+
+# theme=vague_colorscheme
+theme=custom_colorscheme
 
 alpha-blending=native
 
-font-family=IosevkaTerm Nerd Font
+font-family=ZedMono Nerd Font
 font-size=14
 
 font-style=Regular
-font-style-bold=false
-font-style-italic=false
-font-style-bold-italic=false
 
-# background-opacity=0.85
+font-style-bold=default
+font-style-italic=default
+font-style-bold-italic=default
+
+# font-style-bold=false
+# font-style-italic=false
+# font-style-bold-italic=false
+
+background-opacity=0.85
 # background-blur=true
 
 # cursor-opacity=0.75
