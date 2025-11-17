@@ -152,20 +152,20 @@ path_prepend() { case ":$PATH:" in *":$1:"*) ;; *) PATH="$1:$PATH" ;; esac }
 path_append()  { case ":$PATH:" in *":$1:"*) ;; *) PATH="$PATH:$1" ;; esac }
 typeset -U path PATH
 
-# export NVM_DIR="$HOME/.nvm"
-# [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
-# [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
+[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
 
-lazy_load() {
-	unset -f node npm nvm npx
-	export NVM_DIR="$HOME/.nvm"
-	[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
-	[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
-}
+# lazy_load() {
+# 	unset -f node npm nvm npx
+# 	export NVM_DIR="$HOME/.nvm"
+# 	[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
+# 	[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
+# }
 
-for cmd in node npm nvm npx; do
-	eval "${cmd}() { lazy_load; ${cmd} \$@; }"
-done
+# for cmd in node npm nvm npx; do
+# 	eval "${cmd}() { lazy_load; ${cmd} \$@; }"
+# done
 
 [[ -r "$HOME/.cargo/env" ]] && \. "$HOME/.cargo/env"
 [[ -r "$HOME/.opam/opam-init/init.zsh" ]] && \. "$HOME/.opam/opam-init/init.zsh"
