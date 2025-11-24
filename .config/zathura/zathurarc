@@ -1,0 +1,42 @@
+# include themes/catppuccin-mocha
+# include themes/catppuccin-macchiato
+# include themes/catppuccin-frappe
+# include themes/catppuccin-latte
+
+# set window-title-basename true
+set selection-clipboard "clipboard"
+
+set font "ZedMono Nerd Font 12"
+
+set adjust-open "best-fit"
+set pages-per-row 1
+
+set scroll-page-aware true
+set scroll-full-overlap 0
+set scroll-step 100
+
+# shows or hides gui elements.
+# if it contains 'c', the command line is displayed.
+# if it contains 's', the statusbar is displayed.
+# if it contains 'h', the horizontal scrollbar is displayed.
+# if it contains 'v', the vertical scrollbar is displayed.
+
+set guioptions "shv"
+
+map [normal] r reload
+map [normal] p print
+map [normal] i recolor
+map [normal] J zoom out
+map [normal] K zoom in
+map [normal] R rotate
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+map [fullscreen] r reload
+map [fullscreen] p print
+map [fullscreen] i recolor
+map [fullscreen] J zoom out
+map [fullscreen] K zoom in
+map [fullscreen] R rotate
