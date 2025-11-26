@@ -58,9 +58,6 @@ window-theme=auto
 theme=NvimDark
 # theme=NvimLight
 
-# theme=vague_colorscheme
-# theme=custom_colorscheme
-
 alpha-blending=native
 
 font-family=ZedMono Nerd Font
