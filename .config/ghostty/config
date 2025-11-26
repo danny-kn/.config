@@ -51,10 +51,6 @@ window-theme=auto
 # theme=catppuccin-frappe
 # theme=catppuccin-latte
 
-# theme=rose-pine
-# theme=rose-pine-moon
-# theme=rose-pine-dawn
-
 theme=NvimDark
 # theme=NvimLight
 
